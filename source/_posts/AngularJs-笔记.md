@@ -5,21 +5,21 @@ tags: Angular
 categories: JS
 ---
 # AngularJS笔记
-## 1. 获取scope对象
+## 获取scope对象
 
 ```
 var appElement = document.querySelector('[ng-controller=UserContractCtrl]');
 var $scope = angular.element(appElement).scope();
 ```
 
-## 2. ng-class的用法
+## ng-class的用法
 
 ```
 <label ng-class="{'aaa' : 'labelcheck1' ,'bbb' : 'labelcheck2' , 'ccc' : 'labelcheck3'}[label]">
 //label为String类型,根据它的值来判断添加哪个class
 ```
 
-## 3. select的用法
+## select的用法
 
 ```
 //JS
@@ -39,7 +39,7 @@ $scope.searchSelect = $scope.searchOption[0];
 
 如果选中申请人，那么$scope.searchSelect.value就等于'applicantName'
 
-## 4. ui-bootstrap pagination的用法
+## ui-bootstrap pagination的用法
 [angular-ui](http://angular-ui.github.io/bootstrap/) 这个网页得翻墙访问，用国内的网访问的特别慢
 ```
 //JS
@@ -52,14 +52,14 @@ var app = angular.module('myApp', ['ui.bootstrap']);
 //boundary-links 代表是否显示首页和尾页按钮
 ```
 # 推荐几个好用的angular的插件
-## 1. angular-ui
+## angular-ui
 > 官网: [angular-ui](http://angular-ui.github.io/bootstrap/)
 
 > Github: [angular-ui](https://github.com/angular-ui/bootstrap) 
 
 如果写angular想用bootstrap的话，直接照着例子用，比较方便，而且官网给的例子还有plunker（可以在线调试、运行的网站，唯一不好的就是得翻墙）。github上很活跃，有14000+的星。
 
-## 2. ngSweetAlert
+## ngSweetAlert
 > Github: [ngSweetAlert](https://github.com/oitozero/ngSweetAlert) 
 
 oitozero这哥们把挺有名的alert插件sweetAlert给封装了一下，使用方法也很简单。（注：[sweetAlert](https://github.com/t4t5/sweetalert) 这个插件很火，而且支持IE8，github上有15000+的星）
@@ -72,7 +72,7 @@ app.controller('yourController', ['$scope', 'SweetAlert', function($scope, Sweet
 }]);
 ```
 
-## 3. loading-bar
+## loading-bar
 > 官网: [angular-loading-bar](https://chieffancypants.github.io/angular-loading-bar)
 
 > Github: [angular-loading-bar](https://github.com/chieffancypants/angular-loading-bar)
@@ -84,7 +84,7 @@ app.controller('yourController', ['$scope', 'SweetAlert', function($scope, Sweet
 var app = angular.module('myApp', ['angular-loading-bar']);
 ```
 
-## 4. validation
+## validation
 > 官网: [validation](http://hueitan.github.io/angular-validation/)
 
 > Github: [validation](https://github.com/hueitan/angular-validation)
