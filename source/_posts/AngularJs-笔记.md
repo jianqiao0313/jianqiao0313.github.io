@@ -51,6 +51,41 @@ var app = angular.module('myApp', ['ui.bootstrap']);
 <ul uib-pagination previous-text="上一页" next-text="下一页" first-text="首页" last-text="末页" total-items="total" boundary-links="true" items-per-page="pageSize" ng-model="currentPage" ng-change="pageChanged()" max-size="5" class="pageUl"></ul>
 //boundary-links 代表是否显示首页和尾页按钮
 ```
+## 按键事件
+
+```
+//HTML
+<input type="text" ng-model="authCode" ng-keyup="mykey($event)"/>
+```
+
+```
+//JS
+$scope.mykey = function (e) {
+        var keycode = window.event ? e.keyCode : e.which;
+        if (keycode == 13) { //回车
+            // Todo...
+        }
+}
+```
+
+## 模板ng-switch
+
+```
+//HTML
+<td ng-switch="credentialsType">
+    <span ng-switch-when="1">身份证</span>
+    <span ng-switch-when="2">护照</span>
+    <span ng-switch-when="3">驾驶证</span>
+    <span ng-switch-when="4">军官证</span>
+    <span ng-switch-when="5">工商登记证</span>
+    <span ng-switch-when="6">税务登记证</span>
+    <span ng-switch-when="7">组织机构代码</span>
+    <span ng-switch-when="99">其他</span>
+</td>
+```
+
+
+
 # 推荐几个好用的angular的插件
 ## angular-ui
 > 官网: [angular-ui](http://angular-ui.github.io/bootstrap/)
