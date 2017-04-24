@@ -80,3 +80,8 @@ algolia:
   adminApiKey: 'ef7be6ac39c816f2298ad25c8ac8d0b1'
   indexName: 'jianqiao0313'
   chunkSize: 5000
+  fields:
+    - title
+    - slug
+    - path
+    - content: strip
