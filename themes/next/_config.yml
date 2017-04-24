@@ -329,7 +329,7 @@ changyan:
 # Share
 #jiathis:
 # Warning: JiaThis does not support https.
-#add_this_id:
+add_this_id: ra-58fd52d263b1f0d4
 
 # Share
 #duoshuo_share: true
@@ -445,7 +445,7 @@ calendar:
 
 # Algolia Search
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 10
   labels:
