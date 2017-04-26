@@ -65,7 +65,7 @@ router.get('/securitycode1', function(req, res, next) {
 ```
 现在，nodejs所有页面都可以用JSESSIONID了，使用方法：global.jsessionid。
 
-# 举个使用的例子：
+# 举个使用的例子
 
 ```
 //路由文件 login.js

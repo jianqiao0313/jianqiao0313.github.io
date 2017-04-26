@@ -332,7 +332,7 @@ changyan:
 add_this_id: ra-58fd52d263b1f0d4
 
 # Share
-#duoshuo_share: true
+duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
