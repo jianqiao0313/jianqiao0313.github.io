@@ -5,7 +5,7 @@ tags: Nodejs
 categories: Nodejs
 ---
 # 项目环境
-我前端框架用的是Angular 1.3.0，Nodejs + express。后台用的是Tomcat，提供接口。
+我前端框架用的是Angular 1.5.8，Nodejs + express。后台用的是Tomcat，提供接口。
 
 所有通讯都是通过get、post请求的方式。
 
@@ -21,7 +21,7 @@ categories: Nodejs
 
 我们项目的流程是先登录。首先发送个get请求获取验证码，这时候后台返回一个JsessionId，然后我的每次get、post请求都需要在cookie里面加上JsessionId。
 
-先贴张get请求获取验证码的图：
+先贴张直接访问Tomcat服务器验证码接口的get请求的图：
 
 ![image](http://oop1po68r.bkt.clouddn.com/nodejs-1.png)
 在Request Headers里面的cookie ： JSESSIONID  这个就是后台返回的。询问了一下后台人员，jsessionid这是请求成功后Tomcat自动加的。

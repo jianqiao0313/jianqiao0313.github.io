@@ -1,5 +1,5 @@
 ---
-title: AngularJs 1.3.0版本 笔记
+title: AngularJs 1.5.8版本 笔记
 date: 2017-04-20 16:59:10
 tags: Angular 
 categories: JS

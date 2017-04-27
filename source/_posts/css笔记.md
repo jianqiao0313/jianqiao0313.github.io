@@ -1,7 +1,8 @@
 ---
 title: css笔记
 date: 2017-04-26 09:32:48
-tags:
+tags: CSS
+categories: CSS
 ---
 # 据说是最好的清除浮动的方法
 
