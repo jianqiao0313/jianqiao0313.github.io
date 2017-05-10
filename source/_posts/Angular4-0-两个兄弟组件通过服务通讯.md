@@ -132,6 +132,36 @@ export class MainComponent implements OnChanges {
 
 ```
 
+最后要在app.module.ts里面 加上AddBaBaoHeService
+```
+//app.module.ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+import { AppComponent } from './app.component';
+import { FooterbuttonComponent } from './footerbutton/footerbutton.component';
+import { MainComponent } from './main/main.component';
+import {AddBaBaoHeService} from './add-ba-bao-he.service';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    FooterbuttonComponent,
+    MainComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule
+  ],
+  providers: [AddBaBaoHeService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
 # 运行结果
 点击第一个滑块后，Chrome的控制台截图如下
 
@@ -146,3 +176,4 @@ main组件里面有个ngOnChanges方法，我觉得并没有执行。这段代�
 # 附参考的plunker
 
 > [Angular2 - Communication between component siblings via a service](https://embed.plnkr.co/P8xCEwSKgcOg07pwDrlO/)
+> [网页版八宝盒](http://wmzxtt.duapp.com/babaohe/)（图片是从这个网页上扒的）
