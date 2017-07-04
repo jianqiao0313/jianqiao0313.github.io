@@ -531,6 +531,10 @@ vendors:
   # https://github.com/hustcc/canvas-nest.js
   canvas_nest:
 
+# 首页文章数量
+index_generator:
+  per_page: 5
+
 
 
 # Assets
