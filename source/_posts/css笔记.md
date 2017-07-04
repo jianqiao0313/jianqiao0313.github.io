@@ -1,6 +1,6 @@
 ---
 title: css笔记
-date: 2017-04-26 09:32:48
+date: 2017-07-04 15:05:22
 tags: CSS
 categories: CSS
 ---
@@ -71,6 +71,3 @@ $('#myModal').modal({
 ```
  <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
-
-
-
