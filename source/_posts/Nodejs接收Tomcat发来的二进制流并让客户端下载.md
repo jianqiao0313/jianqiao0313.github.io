@@ -8,7 +8,7 @@ categories: Nodejs
 前端是Angular 1.5.8 ， nodeJs + express。Nodejs作为代理服务器，转发客户端的Get、Post请求给Tomcat，并把接受到的Tomcat请求返回给客户端。客户端指的就是浏览器。
 
 后台是Tomcat。提供接口。
-
+<!-- more -->
 # 需求
 后台Tomcat返回一个excel的2进制流，Nodejs接收到这个2进制流后返回给客户端。
 

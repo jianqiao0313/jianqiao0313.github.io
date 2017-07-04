@@ -19,7 +19,7 @@ categories: CSS
     height: 0;
 }
 ```
-
+<!-- more -->
 # checkbox 不与说明文字对齐
 
 

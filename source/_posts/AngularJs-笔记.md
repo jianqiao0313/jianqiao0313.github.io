@@ -11,7 +11,7 @@ categories: JS
 var appElement = document.querySelector('[ng-controller=UserContractCtrl]');
 var $scope = angular.element(appElement).scope();
 ```
-
+<!-- more -->
 ## ng-class的用法
 
 ```

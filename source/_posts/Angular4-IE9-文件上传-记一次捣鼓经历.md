@@ -6,6 +6,7 @@ categories: Angular4.0
 ---
 # 需求
 在IE9上，实现单个文件的上传。
+<!-- more -->
 # 环境
 - "@angular/animations": "^4.1.3",
 - "@angular/common": "^4.0.0",

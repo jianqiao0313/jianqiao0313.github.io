@@ -8,7 +8,7 @@ categories: Nodejs
 我前端框架用的是Angular 1.5.8，Nodejs + express。后台用的是Tomcat，提供接口。
 
 所有通讯都是通过get、post请求的方式。 
-
+<!-- more -->
 # 问题
 遇到的很大的一个坑：如何判断用户是否登录？
 
