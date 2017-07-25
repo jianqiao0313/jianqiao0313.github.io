@@ -8,6 +8,7 @@ categories: Angular4.0
 最近写Angular4有这么一个需求，当发送post请求还没返回时（后台处理这个请求需要3-5秒的时间），页面显示一个蒙版，不让用户操作页面，如点击按钮之类的操作。
 # 问题
 当运行ng build --aot --prod后，部署到nodejs服务器上，点击lazy类型的路由，就报错，cannot find module，如下图：
+<!-- more -->
 ![image](http://oop1po68r.bkt.clouddn.com/angular4-3-1.png)
 当只运行ng build的时候，一切正常
 # 环境
