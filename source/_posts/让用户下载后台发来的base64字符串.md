@@ -16,7 +16,7 @@ base64字符串如下：
 # 下载方法
 很简单，在页面添加一个A标签或者渲染dom的时候直接渲染出来一个下载的A标签就行了。A标签如下：
 ```
-<a href="data:application/msword;charset=utf-8;base64,0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAA.............AAAAAAAAAAAAAAAAAAAAAAAAAAAA=">下载</a>
+<a download="jianqiao0313.doc" href="data:application/msword;charset=utf-8;base64,0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAA.............AAAAAAAAAAAAAAAAAAAAAAAAAAAA=">下载</a>
 ```
 注意要更改一下 **data** 的格式，后台给我发过来的是doc文件，所以 **data** 就是 **application/msword** 。
 
