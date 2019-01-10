@@ -300,7 +300,17 @@ disqus:
   count: true
 
 # Hypercomments
-hypercomments_id: 89863
+hypercomments_id: 
+
+# gittalk
+gitalk:
+  enable: true
+  githubID: jianqiao0313
+  repo: jianqiao0313.github.io
+  ClientID: aaef8f2ea509b96af869
+  ClientSecret: 789dacf34587f69b25c3318ae660604bc4dbcff2
+  adminUser: 
+  distractionFreeMode: true
 
 # Gentie productKey
 #gentie_productKey:
