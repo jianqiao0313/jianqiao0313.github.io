@@ -7,15 +7,15 @@ categories: Nodejs
 # 需求
 调用.jar文件，并且模仿bash输入，如下图
 <!-- more -->
-![image](http://oop1po68r.bkt.clouddn.com/nodejs-4-1.png)
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodejs-4-1.png)
 模仿cmd输入java -jar testKeyAuth.jar，并且输入参数，如3。
 # 问题
 - 无法通过'java -jar testKeyAuth.jar 3'这条命令来输入第一个参数，如下图
-![image](http://oop1po68r.bkt.clouddn.com/nodejs-4-2.png)
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodejs-4-2.png)
 我在后面输入3，这个输入项并没有在程序中体现
 - nodejs如何执行java -jar命令
 # 如何粗暴的解决问题
-![image](http://oop1po68r.bkt.clouddn.com/nodejs-4-3.png)
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodejs-4-3.png)
 照着文档上的抄
 
 ```

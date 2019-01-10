@@ -63,7 +63,7 @@ router.get(/^\/(\d+)\/print/ , function(req , res , next){
 ```
 ## 截图
 ### 后台返回的2进制流（chunks数组里面的元素）
-![image](http://oop1po68r.bkt.clouddn.com/Nodejs-2-1.png)
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/Nodejs-2-1.png)
 可能跟Nodejs的设计有关，接收到的2进制流不是一次接收完，一共接收了6次才接收完，我对Nodejs的原理还不是很了解，所以无法解释为什么要打印6次。
 
 
@@ -123,4 +123,4 @@ router.get(/^\/(\d+)\/print/ , function(req , res , next){
 
 截个图庆祝一下
 
-![image](http://oop1po68r.bkt.clouddn.com/Nodejs-2-2.png)
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/Nodejs-2-2.png)

@@ -32,7 +32,7 @@ IE9报错：SCRIPT438: 对象不支持"apply"属性或方法
 
 英文：Object doesn't support property or method 'apply'
 
-图片：![image](http://oop1po68r.bkt.clouddn.com/Angular4-2-1.jpg)
+图片：![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/Angular4-2-1.jpg)
 
 # 出现问题的代码
 
@@ -246,7 +246,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 # 写在最后
 现在觉得Angular4越来越好用了，有一些IE9支持不友好的功能，完全可以通过Jquery插件的形式实现，毕竟Jquery火了这么久，有好多高质量的插件。写Angular的时候如果要考虑IE9及以上，不要进入只查文档、google的胡同里，记住你还有Jquery呢。
 
-![image](http://oop1po68r.bkt.clouddn.com/Angular4-2-2.jpg)
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/Angular4-2-2.jpg)
 
 # 对了
 最后推荐一个Github仓库
