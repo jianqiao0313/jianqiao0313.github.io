@@ -309,7 +309,7 @@ gitalk:
   repo: jianqiao0313.github.io
   ClientID: aaef8f2ea509b96af869
   ClientSecret: 789dacf34587f69b25c3318ae660604bc4dbcff2
-  adminUser: jianqiao0313@gmail.com
+  adminUser: jianqiao0313
   distractionFreeMode: true
 
 # Gentie productKey
