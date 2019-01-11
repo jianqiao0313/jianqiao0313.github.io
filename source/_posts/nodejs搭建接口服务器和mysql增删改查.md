@@ -17,7 +17,7 @@ categories: Nodejs
 
     **postman不需要注册**
     
-    **navicat有个破解补丁，把简体中文64位里面的两个文件拷贝到安装目录下即可。每次打开点击跳过（如下图）**
+    **navicat有个破解补丁，把简体中文64位里面的两个文件拷贝到安装目录下即可。每次打开点击试用（如下图）**
 
     ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-2.png)
 
@@ -80,3 +80,123 @@ categories: Nodejs
     ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-14.png)
 
 13. 大功告成，现在数据库已经准备好了。
+
+# 安装express，搭建接口服务器
+
+1.  安装express应用生成器
+
+```
+npm install express-generator -g
+```
+
+2. 创建一个叫 **gzcs** 的应用
+
+```
+express gzcs
+```
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-15.png)
+
+3. 打开目录应该长这样
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-16.png)
+
+4. 安装依赖
+```
+npm install
+```
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-17.png)
+
+5. 运行应用
+```
+npm start
+```
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-18.png)
+
+6. 打开浏览器访问 **http://localhost:3000**
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-19.png)
+
+# express里面增加get、post请求
+
+1. 打开 **routes/index.js**
+
+2. 增加如下代码
+```
+// 增加一个路径为a的GET路由，返回一个json
+router.get('/a', function (req, res, next) {
+  res.send({
+    success: 1,
+    method: 'GET'
+  });
+});
+// 增加一个路径为a的POST路由，返回一个json
+router.post('/a', function (req, res, next) {
+  res.send({
+    success: 1,
+    method: 'POST'
+  });
+});
+```
+3. 整体的index.js长这样
+```
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function (req, res, next) {
+  res.render('index', {
+    title: 'Express'
+  });
+});
+// 增加一个路径为a的GET路由，返回一个json
+router.get('/a', function (req, res, next) {
+  res.send({
+    success: 1,
+    method: 'GET'
+  });
+});
+// 增加一个路径为a的POST路由，返回一个json
+router.post('/a', function (req, res, next) {
+  res.send({
+    success: 1,
+    method: 'POST'
+  });
+});
+
+module.exports = router;
+```
+4. 重启服务
+```
+按 ctrl + C
+npm start
+```
+
+# 用postman测试新增的接口
+
+1. 打开 **postman**， 输入 **http://localhost:3000/a** ，点击 **send** （如下图）
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-20.png)
+
+2. 点击 **+** ， 把方法改为 **post**， 点击 **send** （如下图）
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-21.png)
+
+可以看到，刚才我们在 **index.js** 的路由文件里面加的两个接口已经成功了，可以监听 **/a** 的 **get** 请求和 **/a** 的 **post** 请求。
+
+# 提升幸福感的小插件-nodemon
+目前我们每次更新代码，都需要关闭服务后再执行 **npm start**，这样太麻烦了，可以全局安装 **nodemon**，并用 **nodemon** 启动服务，这样每次更新代码后，服务就会**自动重启**，很方便。
+
+1. 全局安装 **nodemon**
+
+```
+npm install nodemon -g
+```
+
+2. 用 **nodemon** 启动服务
+
+```
+nodemon bin/www
+```
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-22.png)
+
+# 用nodejs操纵mysql
