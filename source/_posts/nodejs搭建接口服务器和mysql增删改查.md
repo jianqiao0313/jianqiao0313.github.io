@@ -4,6 +4,11 @@ date: 2019-01-11 16:34:27
 tags: Nodejs
 categories: Nodejs
 ---
+# 简介
+
+从零单排学会用nodejs搭建接口服务器，对mysql进行增删改查
+
+<!-- more -->
 
 # 准备工作
 1. [下载Postman和Navicat并安装](https://pan.baidu.com/s/17hRqsMZB1ehMXTvmAsvz2w)
