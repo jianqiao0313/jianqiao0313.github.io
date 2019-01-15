@@ -200,3 +200,102 @@ nodemon bin/www
 ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-22.png)
 
 # 用nodejs操纵mysql
+
+1. 安装mysql的npm包
+
+```
+npm install mysql --save
+```
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-23.png)
+
+2. 在项目根目录创建config文件夹，在config文件夹里创建db.js
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-24.png)
+
+3. db.js里填入以下内容
+
+> **密码我单独给你**
+```
+// gzcs就是我们的这次测试的数据库名
+var mysql = require("mysql");
+var pool = mysql.createPool({
+    host:"47.95.2.204",
+    user:"root",
+    password:"",
+    database:"gzcs"
+});
+
+function query(sql,callback){
+    pool.getConnection(function(err,connection){
+        connection.query(sql, function (err,rows) {
+            callback(err,rows);
+            connection.release();
+        });
+    });
+}
+
+exports.query = query;
+```
+
+4. 在routes/index.js里查询test表里所有数据 
+```
+var express = require('express');
+var router = express.Router();
+var db = require("../config/db");
+/* GET home page. */
+router.get('/', function (req, res, next) {
+  res.render('index', {
+    title: 'Express'
+  });
+});
+// 增加一个路径为get的GET路由，返回一个json
+router.get('/get', function (req, res, next) {
+  db.query('select * from test', function (err, rows) {
+    if (err) {
+      res.send({
+        success: 0,
+        message: '数据库报错,' + err
+      });
+    } else {
+      res.send({
+        success: 1,
+        data: rows,
+        message: '查询test表成功'
+      })
+    }
+  })
+});
+
+module.exports = router;
+```
+5. 在postman里测试咱们写的接口对不对
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-25.png)
+
+6. 插入数据
+
+```
+// insert
+router.post('/insert', function (req, res, next) {
+  let name = req.body.name;
+  db.query(`insert into test (name) values ('${name}')`, function (err, rows) {
+    if (err) {
+      res.send({
+        success: 0,
+        message: '新增失败'
+      });
+    } else {
+      res.send({
+        success: 1,
+        message: '新增成功'
+      })
+    }
+  });
+})
+```
+
+7. 在postman里测试插入接口
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-26.png)
+
+> 注：因为id为自增，所以不需要传入
