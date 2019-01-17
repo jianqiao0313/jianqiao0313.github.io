@@ -293,9 +293,155 @@ router.post('/insert', function (req, res, next) {
   });
 })
 ```
+> 注：插入的数据字段有多个的时候这么写db.query(`insert into test (name,age) values ('${name}', ${age})`, function(err, rows){});
 
 7. 在postman里测试插入接口
 
 ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-26.png)
 
 > 注：因为id为自增，所以不需要传入
+
+8. 删除数据
+```
+// delete
+router.post('/delete', function (req, res, next) {
+  let id = req.body.id;
+  db.query(`delete from test where id=${id}`, function (err, rows) {
+    if (err) {
+      res.send({
+        success: 0,
+        message: '删除失败'
+      });
+    } else {
+      res.send({
+        success: 1,
+        message: '删除成功'
+      })
+    }
+  });
+})
+```
+> 注 因为id是int类型 所以where id=${id}不需要加引号，如果想通过name来删除，需要这么写db.query(`delete from test where name='${name}'`, function(err,row){});
+
+9. 在postman里测试删除接口
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-27.png)
+
+已经删除了第6条记录
+
+10. 修改数据
+```
+// update
+router.post('/update', function (req, res, next) {
+  let id = req.body.id;
+  let name = req.body.name;
+  db.query(`update test set name='${name}' where id=${id}`, function (err, rows) {
+    if (err) {
+      res.send({
+        success: 0,
+        message: '修改失败'
+      });
+      console.log(err);
+    } else {
+      res.send({
+        success: 1,
+        message: '修改成功'
+      })
+    }
+  });
+});
+```
+> 注：更新一条记录多个字段的时候这么写db.query(`update test set name='${name}',age='${age}' where id=${id}`, function(err, rows){});
+
+11. 在postman里测试修改接口
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-27.png)
+
+已经把第五条记录的 **heihei** 改成了 **jiao**
+
+# 小结
+
+目前你已经学会了最基本的增删改查，我把 **index.js** 的代码都贴出来，接下来会学习添加多条数据，插入多条数据，修改多条数据，删除多条数据，给表做分页，根据字段来排序。
+
+```
+var express = require('express');
+var router = express.Router();
+var db = require("../config/db");
+/* GET home page. */
+router.get('/', function (req, res, next) {
+  res.render('index', {
+    title: 'Express'
+  });
+});
+// select
+router.get('/get', function (req, res, next) {
+  db.query('select * from test', function (err, rows) {
+    if (err) {
+      res.send({
+        success: 0,
+        message: '数据库报错,' + err
+      });
+    } else {
+      res.send({
+        success: 1,
+        data: rows,
+        message: '查询test表成功'
+      });
+    }
+  });
+});
+// insert
+router.post('/insert', function (req, res, next) {
+  let name = req.body.name;
+  db.query(`insert into test (name) values ('${name}')`, function (err, rows) {
+    if (err) {
+      res.send({
+        success: 0,
+        message: '新增失败'
+      });
+    } else {
+      res.send({
+        success: 1,
+        message: '新增成功'
+      })
+    }
+  });
+})
+// delete
+router.post('/delete', function (req, res, next) {
+  let id = req.body.id;
+  db.query(`delete from test where id=${id}`, function (err, rows) {
+    if (err) {
+      res.send({
+        success: 0,
+        message: '删除失败'
+      });
+    } else {
+      res.send({
+        success: 1,
+        message: '删除成功'
+      })
+    }
+  });
+})
+// update
+router.post('/update', function (req, res, next) {
+  let id = req.body.id;
+  let name = req.body.name;
+  db.query(`update test set name='${name}' where id=${id}`, function (err, rows) {
+    if (err) {
+      res.send({
+        success: 0,
+        message: '修改失败'
+      });
+    } else {
+      res.send({
+        success: 1,
+        message: '修改成功'
+      })
+    }
+  });
+});
+module.exports = router;
+```
+# 高级用法
