@@ -351,11 +351,11 @@ router.post('/update', function (req, res, next) {
   });
 });
 ```
-> 注：更新一条记录多个字段的时候这么写db.query(`update test set name='${name}',age='${age}' where id=${id}`, function(err, rows){});
+> 注：更新一条记录多个字段的时候这么写db.query(`update test set name='${name}',age=${age} where id=${id}`, function(err, rows){});
 
 11. 在postman里测试修改接口
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-27.png)
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-28.png)
 
 已经把第五条记录的 **heihei** 改成了 **jiao**
 
@@ -445,3 +445,141 @@ router.post('/update', function (req, res, next) {
 module.exports = router;
 ```
 # 高级用法
+
+1. 首先我们把表弄的复杂一点
+
+打开navicat，右键点击 **设计表** ，如下图
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-29.png)
+
+2. 新增 **age** 字段，点击 **添加字段** ，输入 **age** ，类型是 **Int**， 长度是 **3**（因为没有超过999岁的人），点击 **保存** 。如下图
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-30.png)
+
+3. 刷新数据库，就能看到新增的列了，如下图
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-31.png)
+
+4. 我们给随便添加点数据，然后点击 **√** ，如下图
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-32.png)
+
+5. 修改一下多条数据操纵的接口，打开 **config/db.js**
+```
+var mysql = require("mysql");
+var pool = mysql.createPool({
+    host: "47.95.2.204",
+    user: "root",
+    password: "", // 密码我单独给你
+    database: "gzcs"
+});
+
+function query(sql, callback) {
+    pool.getConnection(function (err, connection) {
+        connection.query(sql, function (err, rows) {
+            callback(err, rows);
+            connection.release();
+        });
+    });
+}
+// 新增多条操作的接口
+function multipleQuery(sql, values, callback) {
+    pool.getConnection(function (err, connection) {
+        connection.query(sql, values, function (err, rows) {
+            callback(err, rows);
+            connection.release();
+        });
+    });
+}
+exports.query = query;
+exports.multipleQuery = multipleQuery;
+```
+
+6. 在 **router/index.js** 里添加 **插入多条** 的方法
+
+```
+// insert multiple
+router.post('/insertMultiple', function (req, res, next) {
+  // 请求带过来的数组
+  let reqArr = req.body.data;
+  // 我们组装后的数组
+  let insertArr = [];
+  // 组装数据
+  reqArr.forEach(function (item) {
+    insertArr.push([item.name, item.age]);
+  })
+  // insertArr长这样：[['33', 33], ['44', 44]] 对应下面的sql语句中的 (name,age)。换句话说 就是把 ? 替换成inserArr
+  db.multipleQuery(`insert into test (name,age) values ?`, [insertArr], function (err, rows) {
+    if (err) {
+      res.send({
+        success: 0,
+        message: '插入多条失败'
+      });
+    } else {
+      res.send({
+        success: 1,
+        message: '插入多条成功'
+      })
+    }
+  });
+});
+```
+
+7. 在postman里测试插入多条接口，需要改变传值类型噢，要传json。
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-33.png)
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-34.png)
+
+> 注：因为 **age** 是 **Int** 类型，所以不需要加 **引号**。
+
+8. 在navicat里查看数据库结果，可以看到有了33和44。如下图
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-35.png)
+
+9. 删除刚才创建的 **33** 和 **44**
+
+```
+// delete multiple
+router.post('/deleteMultiple', function (req, res, next) {
+  // 请求带过来的数组
+  let reqArr = req.body.data;
+  // 我们组装后的数组
+  let deleteArr = [];
+  // 组装数据
+  reqArr.forEach(function (item) {
+    deleteArr.push([item.id]);
+  })
+  // deleteArr长这样：[18, 19] 对应下面的sql语句中的 (id)
+  db.multipleQuery(`delete from test where (id) in (?)`, [deleteArr], function (err, rows) {
+    if (err) {
+      console.log(err);
+      res.send({
+        success: 0,
+        message: '删除多条失败'
+      });
+    } else {
+      res.send({
+        success: 1,
+        message: '删除多条成功'
+      })
+    }
+  });
+});
+```
+
+10. 在postman里测试删除多条接口，可以看到33和44都没了。如下图
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-36.png)
+
+11. 新增、修改多条记录请多次调用单条新增、修改接口
+
+12. 把数据按age排序(desc 降序, asc 升序)
+```
+db.query('select * from test order by age desc', function (err, rows) {});
+```
+
+![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-37.png)
+
+
+13. 分页
