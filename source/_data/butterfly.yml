@@ -5,15 +5,15 @@
 # xxx || icon:
 #   xxx || 連結 || icon
 menu:
-  Home: / || fa fa-home
-  Archives: /archives/ || fa fa-archive
-  Tags: /tags/ || fa fa-tags
-  Categories: /categories/ || fa fa-folder-open
-  Link: /link/ || fa fa-link
-  About: /about/ || fa fa-heart
+  Home: /index.html || fa fa-home
+  Archives: /archives/index.html || fa fa-archive
+  Tags: /tags/index.html || fa fa-tags
+  Categories: /categories/index.html || fa fa-folder-open
+  Link: /link/index.html || fa fa-link
+  About: /about/index.html || fa fa-heart
   List||fa fa-list:
-    - Music || /music/ || fa fa-music
-    - Movie || /movies/ || fa fa-film
+    - Music || /music/index.html || fa fa-music
+    - Movie || /movies/index.html || fa fa-film
 
 # Favicon
 # ---------------
@@ -52,8 +52,8 @@ copy:
 #   icon: link
 # ---------------
 social:
-  fa fa-github: https://github.com/jerryc127
-  fa fa-envelope: mailto:xxxxxxxx@gmail.com
+  fa fa-github: https://github.com/jianqiao0313
+  fa fa-envelope: mailto:jianqiao0313@gmail.com
   fa fa-rss: /atom.xml
 
 ####    search    ####
