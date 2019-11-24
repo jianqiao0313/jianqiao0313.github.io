@@ -419,11 +419,11 @@ subtitle:
   # source: 3  調用一句网（簡體） http://yijuzhan.com/
   # source: 4  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的内容
-  source: 3
+  source: 2
   # (如果有英文逗號' , '，請使用轉義字符 &#44;)
-  sub:
-    - 今日事&#44;今日畢
-    - Never put off till tomorrow what you can do today
+  # sub:
+  #  - 今日事&#44;今日畢
+  #  - Never put off till tomorrow what you can do today
 
 
 ####    側邊欄    ####
@@ -435,8 +435,8 @@ aside:
   card_announcement: true
   card_recent_post: true
   card_categories: true
-  card_tags: true
-  card_archives: true
+  card_tags: false
+  card_archives: false
   card_webinfo: true
 
 # 網站公告
