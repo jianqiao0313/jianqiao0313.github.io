@@ -8,7 +8,7 @@ categories: Nodejs
 
 从零单排学会用nodejs搭建接口服务器，对mysql进行增删改查
 
-<!-- more -->
+
 
 # 准备工作
 1. [下载Postman和Navicat并安装](https://pan.baidu.com/s/17hRqsMZB1ehMXTvmAsvz2w)
@@ -19,11 +19,11 @@ categories: Nodejs
     
     **navicat有个破解补丁，把简体中文64位里面的两个文件拷贝到安装目录下即可。每次打开点击试用（如下图）**
 
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-2.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-2.png)
 
 2. 查看本地Nodejs版本（运行命令 **node -v** ）
 
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-1.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-1.png)
    
     只要保证Nodejs版本为8即可
 
@@ -31,53 +31,53 @@ categories: Nodejs
 
 1. 打开软件 -> 文件 -> 新建连接 -> Mysql（如下图）
    
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-3.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-3.png)
 
 2. 填写Mysql信息（如下图）
 
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-4.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-4.png)
     
     > 密码我单独给你
 
 3. 点击 **测试连接**，弹出 **连接成功**（如下图）
 
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-5.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-5.png)
 
 4. 点击 **确定**后，左侧出来一个阿里云的链接（如下图）
    
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-6.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-6.png)
 
 5. 双击 **阿里云** , 左边有个 **gzcs** , 这个数据库就是我们要测试用的（如下图）
    
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-7.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-7.png)
 
 6. 点击 **创建表** （如下图）
 
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-8.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-8.png)
 
 7. 输入名为 **Id**，长度 **10**，**不为null**，单击 **键**，**自动递增** （如下图）
 
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-9.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-9.png)
 
 8. 点击 **添加字段**，输入名为 **name**，字符集为 **utf8** （如下图）
    
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-10.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-10.png)
 
 9. 点击保存，输入表名 **test** （如下图）
 
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-11.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-11.png)
 
 10. 左侧应该有 **test** 这个表了，双击（如下图）
 
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-12.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-12.png)
 
 11. 猛点最下面的 **+** , 咱创建几条数据（如下图）
 
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-13.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-13.png)
 
 12. 五条记录已经建好了，下面给这五条记录的 **name** 字段赋值，内容随便填，点击 **√** （如下图）
 
-    ![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-14.png)
+    ![image](https://static.gezichenshan.top/blog/nodedjs-mysql-14.png)
 
 13. 大功告成，现在数据库已经准备好了。
 
@@ -94,27 +94,27 @@ npm install express-generator -g
 ```
 express gzcs
 ```
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-15.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-15.png)
 
 3. 打开目录应该长这样
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-16.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-16.png)
 
 4. 安装依赖
 ```
 npm install
 ```
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-17.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-17.png)
 
 5. 运行应用
 ```
 npm start
 ```
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-18.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-18.png)
 
 6. 打开浏览器访问 **http://localhost:3000**
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-19.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-19.png)
 
 # express里面增加get、post请求
 
@@ -175,11 +175,11 @@ npm start
 
 1. 打开 **postman**， 输入 **http://localhost:3000/a** ，点击 **send** （如下图）
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-20.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-20.png)
 
 2. 点击 **+** ， 把方法改为 **post**， 点击 **send** （如下图）
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-21.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-21.png)
 
 可以看到，刚才我们在 **index.js** 的路由文件里面加的两个接口已经成功了，可以监听 **/a** 的 **get** 请求和 **/a** 的 **post** 请求。
 
@@ -197,7 +197,7 @@ npm install nodemon -g
 ```
 nodemon bin/www
 ```
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-22.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-22.png)
 
 # 用nodejs操纵mysql
 
@@ -206,11 +206,11 @@ nodemon bin/www
 ```
 npm install mysql --save
 ```
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-23.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-23.png)
 
 2. 在项目根目录创建config文件夹，在config文件夹里创建db.js
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-24.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-24.png)
 
 3. db.js里填入以下内容
 
@@ -270,7 +270,7 @@ module.exports = router;
 ```
 5. 在postman里测试咱们写的接口对不对
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-25.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-25.png)
 
 6. 插入数据
 
@@ -297,7 +297,7 @@ router.post('/insert', function (req, res, next) {
 
 7. 在postman里测试插入接口
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-26.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-26.png)
 
 > 注：因为id为自增，所以不需要传入
 
@@ -325,7 +325,7 @@ router.post('/delete', function (req, res, next) {
 
 9. 在postman里测试删除接口
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-27.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-27.png)
 
 已经删除了第6条记录
 
@@ -355,7 +355,7 @@ router.post('/update', function (req, res, next) {
 
 11. 在postman里测试修改接口
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-28.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-28.png)
 
 已经把第五条记录的 **heihei** 改成了 **jiao**
 
@@ -450,19 +450,19 @@ module.exports = router;
 
 打开navicat，右键点击 **设计表** ，如下图
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-29.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-29.png)
 
 2. 新增 **age** 字段，点击 **添加字段** ，输入 **age** ，类型是 **Int**， 长度是 **3**（因为没有超过999岁的人），点击 **保存** 。如下图
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-30.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-30.png)
 
 3. 刷新数据库，就能看到新增的列了，如下图
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-31.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-31.png)
 
 4. 我们给随便添加点数据，然后点击 **√** ，如下图
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-32.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-32.png)
 
 5. 修改一下多条数据操纵的接口，打开 **config/db.js**
 ```
@@ -527,15 +527,15 @@ router.post('/insertMultiple', function (req, res, next) {
 
 7. 在postman里测试插入多条接口，需要改变传值类型噢，要传json。
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-33.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-33.png)
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-34.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-34.png)
 
 > 注：因为 **age** 是 **Int** 类型，所以不需要加 **引号**。
 
 8. 在navicat里查看数据库结果，可以看到有了33和44。如下图
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-35.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-35.png)
 
 9. 删除刚才创建的 **33** 和 **44**
 
@@ -570,7 +570,7 @@ router.post('/deleteMultiple', function (req, res, next) {
 
 10. 在postman里测试删除多条接口，可以看到33和44都没了。如下图
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-36.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-36.png)
 
 11. 新增、修改多条记录请多次调用单条新增、修改接口
 
@@ -579,7 +579,7 @@ router.post('/deleteMultiple', function (req, res, next) {
 db.query('select * from test order by age desc', function (err, rows) {});
 ```
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodedjs-mysql-37.png)
+![image](https://static.gezichenshan.top/blog/nodedjs-mysql-37.png)
 
 
 13. 分页

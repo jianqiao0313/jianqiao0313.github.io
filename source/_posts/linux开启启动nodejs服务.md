@@ -6,7 +6,7 @@ categories: Nodejs
 ---
 # 需求
 linux服务器开机自启动nodejs。
-<!-- more -->
+
 # 方法
 ## 首先安装forever来守护进程
 

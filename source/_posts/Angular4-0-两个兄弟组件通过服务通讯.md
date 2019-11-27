@@ -8,12 +8,12 @@ categories: Angular4.0
 最近在Taptap上下载一个游戏，叫盗墓长生印，非常有意思，里面有一个小游戏，叫八宝盒，类似于华容道，打算开发一个网页版的自动完成，既然最近在学Angular4.0.0，那就拿Angular4.0开发把。算法我打算用DFS，用Typescript写算法不知道好不好写，二维数组就不怎么好定义。等完成后会放到github上。
 
 网上查了好多，父子组件通讯比较简单，但是兄弟组件通讯只能用service，如果有更好的方法欢迎留言交流。
-<!-- more -->
+
 ## 附一张八宝盒的截图
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/Angular4-1-1.png)
+![image](https://static.gezichenshan.top/blog/Angular4-1-1.png)
 
 # 项目结构
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/Angular4-1-4.png)
+![image](https://static.gezichenshan.top/blog/Angular4-1-4.png)
 
 ## 说明
 Main这个组件主要是背景面板，执行DFS算法等。
@@ -165,7 +165,7 @@ export class AppModule { }
 # 运行结果
 点击第一个滑块后，Chrome的控制台截图如下
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/Angular4-1-5.png)
+![image](https://static.gezichenshan.top/blog/Angular4-1-5.png)
 
 # 疑惑
 main组件里面有个ngOnChanges方法，我觉得并没有执行。这段代码我是从plunker粘过来的，还以为要在ngOnchanges这个函数里面处理逻辑了，原作者的意图好像确实是这样，但不知道为什么就是不执行，Angular4的原理还不太名白，所以暂且放着。

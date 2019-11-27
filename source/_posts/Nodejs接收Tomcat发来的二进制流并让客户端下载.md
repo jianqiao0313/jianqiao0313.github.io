@@ -8,7 +8,7 @@ categories: Nodejs
 前端是Angular 1.5.8 ， nodeJs + express。Nodejs作为代理服务器，转发客户端的Get、Post请求给Tomcat，并把接受到的Tomcat请求返回给客户端。客户端指的就是浏览器。
 
 后台是Tomcat。提供接口。
-<!-- more -->
+
 # 需求
 后台Tomcat返回一个excel的2进制流，Nodejs接收到这个2进制流后返回给客户端。
 
@@ -63,7 +63,7 @@ router.get(/^\/(\d+)\/print/ , function(req , res , next){
 ```
 ## 截图
 ### 后台返回的2进制流（chunks数组里面的元素）
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/Nodejs-2-1.png)
+![image](https://static.gezichenshan.top/blog/Nodejs-2-1.png)
 可能跟Nodejs的设计有关，接收到的2进制流不是一次接收完，一共接收了6次才接收完，我对Nodejs的原理还不是很了解，所以无法解释为什么要打印6次。
 
 
@@ -123,4 +123,4 @@ router.get(/^\/(\d+)\/print/ , function(req , res , next){
 
 截个图庆祝一下
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/Nodejs-2-2.png)
+![image](https://static.gezichenshan.top/blog/Nodejs-2-2.png)

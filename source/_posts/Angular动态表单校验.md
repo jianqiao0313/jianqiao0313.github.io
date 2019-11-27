@@ -6,11 +6,11 @@ categories: Angular4.0
 ---
 # 需求
 当表单有一个值改变的时候，有一些字段要从不检验变成检验是否输入。
-<!-- more -->
+
 如下图：
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/Angular4-4-1.png)
+![image](https://static.gezichenshan.top/blog/Angular4-4-1.png)
 ---
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/Angular4-4-2.png)
+![image](https://static.gezichenshan.top/blog/Angular4-4-2.png)
 当组织类型为Ordererorg的时候，读权限不需要验证
 
 当组织类型为peerorg的时候，读权限需要验证

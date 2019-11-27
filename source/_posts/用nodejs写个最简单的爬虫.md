@@ -6,7 +6,7 @@ categories: Nodejs
 ---
 # 需求
 最近在看个漫画，想把所有图片都下载下来存手机里，于是昨天就写了个爬虫。
-<!-- more -->
+
 # 环境
 - Nodejs : v6.11.0
 
@@ -26,7 +26,7 @@ categories: Nodejs
 npm install
 ## 打开网页，通过chrome分析
 漫画地址：http://m.kukudm.com/comiclist/1087/index.htm
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodejs-3-1.png)
+![image](https://static.gezichenshan.top/blog/nodejs-3-1.png)
 发现所有的章节链接都在 #list > li > a 里面，首先先通过nodejs获取整个html内容，然后提取出来每章漫画的链接。
 
 ```
@@ -46,11 +46,11 @@ request
 })
 ```
 打印一下data对象，如下图:
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodejs-3-2.png)
+![image](https://static.gezichenshan.top/blog/nodejs-3-2.png)
 
 ## 打开263章节的页面，通过chrome分析
 打开 'http://m.kukudm.com/' + data.attribs.href  <===> http://m.kukudm.com/comiclist/1087/58801/1.htm
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodejs-3-3.png)
+![image](https://static.gezichenshan.top/blog/nodejs-3-3.png)
 发现两点：
 1. 第1页最后是1.htm，我就想第二页是不是2.htm，把1改成2一试果然是这样
 2. 每个漫画的img是通过document.write添加的，不是html页面写好的，看样子还得用正则匹配
@@ -227,5 +227,5 @@ low到不行的爬虫，但是能干活，还好这个网站没有什么request�
 
 欣赏下控制台输出
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodejs-3-4.png)
+![image](https://static.gezichenshan.top/blog/nodejs-3-4.png)
 

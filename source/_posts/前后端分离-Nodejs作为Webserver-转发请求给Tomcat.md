@@ -8,7 +8,7 @@ categories: Nodejs
 我前端框架用的是Angular 1.5.8，Nodejs + express。后台用的是Tomcat，提供接口。
 
 所有通讯都是通过get、post请求的方式。 
-<!-- more -->
+
 # 问题
 遇到的很大的一个坑：如何判断用户是否登录？
 
@@ -23,7 +23,7 @@ categories: Nodejs
 
 先贴张直接访问Tomcat服务器验证码接口的get请求的图：
 
-![image](http://gezichenshan.oss-cn-beijing.aliyuncs.com/blog/nodejs-1.png)
+![image](https://static.gezichenshan.top/blog/nodejs-1.png)
 在Request Headers里面的cookie ： JSESSIONID  这个就是后台返回的。询问了一下后台人员，jsessionid这是请求成功后Tomcat自动加的。
 
 下面问题来了，如何拿到JSESSIONID，然后重新组装cookie给后台发回去呢？
