@@ -193,17 +193,17 @@ disqus:
 # enable: false
 # uid:
 
-# gitalk:
-#   enable: false
-#   client_id:
-#   client_secret:
-#   repo:
-#   owner:
-#   admin:
-#   language:   # en , zh-CN , zh-TW
-####   Using this js for redirect to gitalk container after login
-####   See https://github.com/gitalk/gitalk/issues/125
-#   js: https://cdn.jsdelivr.net/gh/upupming/gitalk@36368e5dffd049e956cdbbd751ff96c28d8255cf/dist/gitalk.min.js
+gitalk:
+  enable: true
+  client_id: aaef8f2ea509b96af869
+  client_secret: 789dacf34587f69b25c3318ae660604bc4dbcff2
+  repo: https://github.com/jianqiao0313/jianqiao0313.github.io
+  owner: jianqiao0313
+  admin: jianqiao0313
+  language: zh-CN  # en , zh-CN , zh-TW
+###   Using this js for redirect to gitalk container after login
+###   See https://github.com/gitalk/gitalk/issues/125
+  js: https://cdn.jsdelivr.net/gh/upupming/gitalk@36368e5dffd049e956cdbbd751ff96c28d8255cf/dist/gitalk.min.js
 
 # valine comment system. https://valine.js.org
 valine:
@@ -263,7 +263,7 @@ Flink:
 
 # 打賞按鈕
 reward:
-  enable: true
+  enable: false
   QR_code:
     - itemlist:
         img: /img/wechat.jpg
@@ -337,16 +337,16 @@ canvas_ribbon_piao:
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
-  enable: false
+  enable: true
   color: '0,0,255' #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
   count: 99 # the number of lines, default: 99.
-  mobile: false # false 手機端不顯示 true 手機端顯示
+  mobile: true # false 手機端不顯示 true 手機端顯示
 
 # 打字效果
 activate_power_mode:
-  enable: false
+  enable: true
 
 # 鼠標點擊效果
 # 避免卡頓，建議只開啓一個
