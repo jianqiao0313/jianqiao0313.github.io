@@ -197,7 +197,7 @@ gitalk:
   enable: true
   client_id: aaef8f2ea509b96af869
   client_secret: 789dacf34587f69b25c3318ae660604bc4dbcff2
-  repo: https://github.com/jianqiao0313/jianqiao0313.github.io
+  repo: jianqiao0313.github.io
   owner: jianqiao0313
   admin: jianqiao0313
   language: zh-CN  # en , zh-CN , zh-TW
