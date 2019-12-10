@@ -98,3 +98,8 @@ deploy:
   type: git
   repo: git@github.com:jianqiao0313/jianqiao0313.github.io.git
   branch: master
+
+algolia:
+  applicationID: 'EC0I4JLQLR'
+  apiKey: '8ade3193dfaa6f084a23be25d0c1c64e'
+  indexName: 'jianqiao0313'
