@@ -124,3 +124,5 @@ hexo g -d
 - 把博客放到阿里云的OSS里
 - CDN指向OSS，增加访问速度
 - 写一个脚本，自动把master分支上传的阿里OSS上
+
+# [OSS-CDN-GithubPages搭建自己的博客-下](https://lvjianqiao.top/2019/12/08/OSS-CDN-GithubPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2-%E4%B8%8B/index.html)
