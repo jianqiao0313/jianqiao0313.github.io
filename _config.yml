@@ -96,7 +96,7 @@ theme: Butterfly
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:jianqiao0313/jianqiao0313.github.io.git
+  repo: https://gh_token@github.com:jianqiao0313/jianqiao0313.github.io.git
   branch: master
 
 algolia:
