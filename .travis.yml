@@ -16,7 +16,8 @@ install:
 
 script:
   - hexo clean
-  - hexo generate
+  - hexo g
+  - hexo algolia
 
 # 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
 after_script:
