@@ -143,9 +143,9 @@ category_img:
 
 cover:
   # 是否顯示文章封面
-  index_enable: true
-  aside_enable: true
-  archives_enable: true
+  index_enable: false
+  aside_enable: false
+  archives_enable: false
   # 封面顯示的位置
   # 三個值可配置 left , right , both
   position: both
@@ -323,10 +323,10 @@ ICP:
 baidu_analytics:
 
 # Google Analytics
-google_analytics:
+google_analytics: UA-166313339-1
 
 # Tencent_analytics ID
-tencent_analytics:
+tencent_analytics: 65882099
 
 # Ads
 # ---------------
