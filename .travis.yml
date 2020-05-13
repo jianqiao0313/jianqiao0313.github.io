@@ -2,6 +2,9 @@ language: node_js #设置语言
 
 node_js: "10.16.3" #设置语言版本
 
+addons:
+  ssh_known_hosts: "$IP"
+
 cache:
   directories:
     - node_modules #缓存依赖
