@@ -3,6 +3,7 @@ title: Angular4 IE9 文件上传--记一次捣鼓经历
 date: 2017-06-23 16:56:40
 tags: Angular4.0
 categories: Angular4.0
+top_img: https://gezichenshan.top/cms/bg
 ---
 # 需求
 在IE9上，实现单个文件的上传。

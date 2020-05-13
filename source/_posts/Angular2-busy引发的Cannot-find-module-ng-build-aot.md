@@ -3,6 +3,7 @@ title: Angular2-busy引发的Cannot find module(ng build --aot)
 date: 2017-07-25 09:02:50
 tags: Angular4.0
 categories: Angular4.0
+top_img: https://gezichenshan.top/cms/bg
 ---
 # 背景
 最近写Angular4有这么一个需求，当发送post请求还没返回时（后台处理这个请求需要3-5秒的时间），页面显示一个蒙版，不让用户操作页面，如点击按钮之类的操作。

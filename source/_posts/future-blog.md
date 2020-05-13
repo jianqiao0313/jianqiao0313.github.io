@@ -2,6 +2,7 @@
 title: future-blog
 date: 2017-10-20 09:12:58
 tags:
+top_img: https://gezichenshan.top/cms/bg
 ---
 # 添加git私钥
 添加私钥是因为可以用ssh方式使用git，而另一种http方式则必须输入用户名密码，较麻烦。

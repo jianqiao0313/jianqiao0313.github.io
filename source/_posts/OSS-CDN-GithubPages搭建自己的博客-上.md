@@ -2,6 +2,7 @@
 title: OSS+CDN+GithubPages搭建自己的博客-上
 date: 2019-11-27 19:50:57
 tags:
+top_img: https://gezichenshan.top/cms/bg
 ---
 
 # [demo体验](https://lvjianqiao.top)

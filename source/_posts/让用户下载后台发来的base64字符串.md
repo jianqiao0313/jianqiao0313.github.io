@@ -3,6 +3,7 @@ title: 让用户下载后台发来的base64字符串
 date: 2017-12-05 10:22:40
 tags: JS 
 categories: JS
+top_img: https://gezichenshan.top/cms/bg
 ---
 # 需求
 后台发来一串base64编码的字符串，是一个xxx.doc文件，现在想让用户点击下载按钮下载。

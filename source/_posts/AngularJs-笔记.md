@@ -3,6 +3,7 @@ title: AngularJs 1.5.8版本 笔记
 date: 2017-04-20 16:59:10
 tags: Angular 
 categories: JS
+top_img: https://gezichenshan.top/cms/bg
 ---
 # AngularJS笔记
 ## 获取scope对象

@@ -2,6 +2,7 @@
 title: miniapp-jenkins-ci
 date: 2020-04-06 22:29:09
 tags: 小程序
+top_img: https://gezichenshan.top/cms/bg
 ---
 # centos系统部署jenkins
 

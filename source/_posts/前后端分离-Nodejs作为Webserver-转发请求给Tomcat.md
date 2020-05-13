@@ -3,6 +3,7 @@ title: 前后端分离 Nodejs作为Webserver 转发请求给Tomcat
 date: 2017-04-25 17:04:12
 tags: Nodejs
 categories: Nodejs
+top_img: https://gezichenshan.top/cms/bg
 ---
 # 项目环境
 我前端框架用的是Angular 1.5.8，Nodejs + express。后台用的是Tomcat，提供接口。

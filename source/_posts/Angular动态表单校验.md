@@ -3,6 +3,7 @@ title: Angular动态表单校验
 date: 2017-10-17 16:17:00
 tags: Angular4.0
 categories: Angular4.0
+top_img: https://gezichenshan.top/cms/bg
 ---
 # 需求
 当表单有一个值改变的时候，有一些字段要从不检验变成检验是否输入。

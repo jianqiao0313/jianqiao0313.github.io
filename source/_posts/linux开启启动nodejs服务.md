@@ -3,6 +3,7 @@ title: linux开启启动nodejs服务
 date: 2018-03-06 15:59:58
 tags: Nodejs
 categories: Nodejs
+top_img: https://gezichenshan.top/cms/bg
 ---
 # 需求
 linux服务器开机自启动nodejs。

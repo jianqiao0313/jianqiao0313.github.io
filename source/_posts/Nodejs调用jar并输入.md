@@ -3,6 +3,7 @@ title: Nodejs调用jar并输入
 date: 2017-08-30 16:44:10
 tags: Nodejs
 categories: Nodejs
+top_img: https://gezichenshan.top/cms/bg
 ---
 # 需求
 调用.jar文件，并且模仿bash输入，如下图

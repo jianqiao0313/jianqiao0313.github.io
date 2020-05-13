@@ -3,6 +3,7 @@ title: IE11 Get请求缓存问题
 date: 2017-08-09 18:17:41
 tags: IE
 categories: IE
+top_img: https://gezichenshan.top/cms/bg
 ---
 # 问题
 最近遇到一个问题，在版本是11.0.9600.18665的IE11上，发送给后台的get请求总是返回同样的值。给后台发送GET请求主要是获取验证码，但是比较神奇的是打开F12后就会发送GET请求了。

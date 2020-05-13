@@ -3,6 +3,7 @@ title: Nodejs接收Tomcat发来的二进制流并让客户端下载
 date: 2017-04-27 16:48:07
 tags: Nodejs
 categories: Nodejs
+top_img: https://gezichenshan.top/cms/bg
 ---
 # 环境
 前端是Angular 1.5.8 ， nodeJs + express。Nodejs作为代理服务器，转发客户端的Get、Post请求给Tomcat，并把接受到的Tomcat请求返回给客户端。客户端指的就是浏览器。

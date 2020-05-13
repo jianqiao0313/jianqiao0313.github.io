@@ -2,6 +2,7 @@
 title: ntfs格式的U盘安装centos
 date: 2020-01-23 18:56:44
 tags: linux
+top_img: https://gezichenshan.top/cms/bg
 ---
 # 目标
 
