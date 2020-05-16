@@ -33,7 +33,10 @@ after_script:
   - cd uploadToOss
   - git clone https://github.com/jianqiao0313/jianqiao0313.github.io.git
   - git clone https://${github_token}@github.com/jianqiao0313/oss.git
-  - ls -a
+  - ls -l
+  - cd jianqiao0313.github.io
+  - ls -l
+  - cd ..
   - cd oss
   - ls -a
   - pwd
