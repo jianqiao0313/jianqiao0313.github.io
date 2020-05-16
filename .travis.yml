@@ -14,6 +14,7 @@ before_script:
   - export HEXO_ALGOLIA_INDEXING_KEY=${algolia}
 
 script:
+  - git clone -b 2.3.5 https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly
   - hexo clean
   - hexo g
   - hexo algolia
@@ -29,10 +30,6 @@ after_script:
   - cd uploadToOss
   - git clone https://github.com/jianqiao0313/jianqiao0313.github.io.git
   - git clone https://${github_token}@github.com/jianqiao0313/oss.git
-  - ls -l
-  - cd jianqiao0313.github.io
-  - ls -l
-  - cd ..
   - cd oss
   - ls -a
   - pwd
