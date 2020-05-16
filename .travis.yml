@@ -36,9 +36,14 @@ after_script:
   - npm i
   - node index.js publicPath=../jianqiao0313.github.io region=${region} accessKeyId=${accessKeyId} accessKeySecret=${accessKeySecret} bucket=${bucket}
 
-  
-
 # 只有指定的分支提交时才会运行脚本
 branches:
   only:
     - hexo
+
+notifications:
+  email:
+    recipients:
+      - jianqiao0313@gmail.com
+    on_success: change
+    on_failure: always
