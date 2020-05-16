@@ -2,25 +2,31 @@ language: node_js #设置语言
 
 node_js: "10.16.3" #设置语言版本
 
-addons:
-  ssh_known_hosts: "$IP"
-
 cache:
   directories:
     - node_modules #缓存依赖
 
-# S: Build Lifecycle
+before_install:
+  - ls -a
+  - pwd
+
 install:
   - npm install -g hexo-cli
   - npm install
+  - ls -a
+  - pwd
 
 before_script:
   - export HEXO_ALGOLIA_INDEXING_KEY=${algolia}
+  - ls -a
+  - pwd
 
 script:
   - hexo clean
   - hexo g
   - hexo algolia
+  - ls -a
+  - pwd
 
 # 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
 after_script:
@@ -29,6 +35,8 @@ after_script:
   # 替换同目录下的_config.yml文件中gh_token字符串为travis后台刚才配置的变量，注意此处sed命令用了双引号。单引号无效！
   - sed -i "s/gh_token/${github_token}/g" ./_config.yml
   - hexo deploy
+  - ls -a
+  - pwd
 
 # 只有指定的分支提交时才会运行脚本
 branches:
