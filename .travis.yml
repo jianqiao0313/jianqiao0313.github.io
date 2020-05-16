@@ -38,7 +38,7 @@ after_script:
   - ls -a
   - pwd
   - npm i
-  - node index.js publicPath=../jianqiao0313.github.io preDirPath=uploadToOss region=${region} accessKeyId=${accessKeyId} accessKeySecret=${accessKeySecret} bucket=${bucket}
+  - node index.js publicPath=../jianqiao0313.github.io region=${region} accessKeyId=${accessKeyId} accessKeySecret=${accessKeySecret} bucket=${bucket}
 
   
 
