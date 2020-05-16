@@ -13,20 +13,14 @@ before_install:
 install:
   - npm install -g hexo-cli
   - npm install
-  - ls -a
-  - pwd
 
 before_script:
   - export HEXO_ALGOLIA_INDEXING_KEY=${algolia}
-  - ls -a
-  - pwd
 
 script:
   - hexo clean
   - hexo g
   - hexo algolia
-  - ls -a
-  - pwd
 
 # 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
 after_script:
@@ -35,8 +29,18 @@ after_script:
   # 替换同目录下的_config.yml文件中gh_token字符串为travis后台刚才配置的变量，注意此处sed命令用了双引号。单引号无效！
   - sed -i "s/gh_token/${github_token}/g" ./_config.yml
   - hexo deploy
+  - mkdir uploadToOss
+  - cd uploadToOss
+  - git clone https://github.com/jianqiao0313/jianqiao0313.github.io.git
+  - git clone https://${github_token}@github.com/jianqiao0313/oss.git
+  - ls -a
+  - cd oss
   - ls -a
   - pwd
+  - npm i
+  - node index.js publicPath=../jianqiao0313.github.io region=${region} accessKeyId=${accessKeyId} accessKeySecret=${accessKeySecret} bucket=${bucket}
+
+  
 
 # 只有指定的分支提交时才会运行脚本
 branches:
