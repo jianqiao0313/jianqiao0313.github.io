@@ -45,5 +45,6 @@ notifications:
   email:
     recipients:
       - jianqiao0313@gmail.com
+      - jianqiao0313@126.com
     on_success: always
     on_failure: always
