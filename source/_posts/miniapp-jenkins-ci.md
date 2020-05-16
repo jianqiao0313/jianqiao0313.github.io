@@ -58,3 +58,5 @@ top_img: https://gezichenshan.top/cms/bg
 ## 稍等片刻，插件安装中
 
 ![image](https://static.gezichenshan.top/blog/linux/centos-jenkins-7.png)
+
+## 安装完成，jenkins就可以进入了
