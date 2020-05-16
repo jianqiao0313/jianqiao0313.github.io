@@ -37,6 +37,8 @@ after_script:
   - cd oss
   - ls -a
   - pwd
+  - npm i
+  - node index.js publicPath=../jianqiao0313.github.io region=${region} accessKeyId=${accessKeyId} accessKeySecret=${accessKeySecret} bucket=${bucket}
 
   
 
