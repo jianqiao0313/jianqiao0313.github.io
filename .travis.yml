@@ -29,8 +29,8 @@ after_script:
   - mkdir uploadToOss
   - cd uploadToOss
   - git clone https://github.com/jianqiao0313/jianqiao0313.github.io.git
-  - git clone https://${github_token}@github.com/jianqiao0313/oss.git
-  - cd oss
+  - git clone https://github.com/jianqiao0313/upload-oss-by-travis-ci.git
+  - cd upload-oss-by-travis-ci
   - ls -a
   - pwd
   - npm i

@@ -174,4 +174,10 @@ list();
 
 9. 大功告成！访问一下试试吧
 
-10. 访问后发现点击一些页面内的链接，跳转的都是首页，为啥呢，因为路径后面缺少index.html，把hexo-theme-butterfly的链接后面加上index.html即可，[详情见此次提交](https://github.com/jianqiao0313/hexo-theme-butterfly/commit/7b030972481036676964cb6af7053b002c6ebab6)
+~~10. 访问后发现点击一些页面内的链接，跳转的都是首页，为啥呢，因为路径后面缺少index.html，把hexo-theme-butterfly的链接后面加上index.html即可，[详情见此次提交](https://github.com/jianqiao0313/hexo-theme-butterfly/commit/7b030972481036676964cb6af7053b002c6ebab6)~~
+
+# 2020年5月18日更新
+
+第10条，OSS目前已更新了子目录首页的功能，只需要开通子目录首页，访问 **https://lvjianqiao.top/archives/** 的路径，就会自动指向 **https://lvjianqiao.top/archives/index.html了** 。
+![image](https://static.gezichenshan.top/blog/cdn-oss-githubPages/29.png)
+
