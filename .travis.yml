@@ -35,7 +35,7 @@ after_script:
   - pwd
   - npm i
   - node index.js publicPath=../jianqiao0313.github.io region=${region} accessKeyId=${accessKeyId} accessKeySecret=${accessKeySecret} bucket=${bucket}
-
+  - echo "build finished"
 # 只有指定的分支提交时才会运行脚本
 branches:
   only:
