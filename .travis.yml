@@ -11,7 +11,7 @@ install:
   - npm install
 
 before_script:
-  - export HEXO_ALGOLIA_INDEXING_KEY=${algolia}
+  - export HEXO_ALGOLIA_INDEXING_KEY=${HEXO_ALGOLIA_INDEXING_KEY}
 
 script:
   - git clone -b 2.3.5 https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly
