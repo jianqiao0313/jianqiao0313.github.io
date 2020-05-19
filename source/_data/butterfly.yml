@@ -349,11 +349,11 @@ google_adsense:
 ####    站長驗證    ####
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-google_site_verification: true
+google_site_verification: JnU2nSL28jlH3ZrHl7cNqKiXi3vgw3xIc0EwKmH1jtI
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
-bing_site_verification: true
+bing_site_verification: 3416E8663599863876FC021C30A34FCA
 
 # Baidu Webmaster tools verification setting
 # See: https://ziyuan.baidu.com/site/
@@ -361,7 +361,7 @@ baidu_site_verification: true
 
 # 360 Webmaster tools verification setting
 # see http://zhanzhang.so.com/
-qihu_site_verification:
+qihu_site_verification: 984fe6b37a5f083cacd159bc2f657dbc
 
 # 打賞按鈕
 reward:
