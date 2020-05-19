@@ -776,3 +776,7 @@ CDN:
 
   # 簡繁轉換
   translate: /js/tw_cn.js
+
+# Daovoice即時客服功能
+daovoice:
+  enable: true

@@ -14,7 +14,7 @@ before_script:
   - export HEXO_ALGOLIA_INDEXING_KEY=${HEXO_ALGOLIA_INDEXING_KEY}
 
 script:
-  - git clone -b 2.3.5 https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly
+  - git clone -b 2.3.5 https://github.com/jianqiao0313/hexo-theme-butterfly.git themes/Butterfly
   - hexo clean
   - hexo g
   - hexo algolia
