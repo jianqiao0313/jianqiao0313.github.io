@@ -519,7 +519,7 @@ subtitle:
   # 打字效果
   effect: true
   # 循環或者只打字一次
-  loop: true
+  loop: false
   # source調用第三方服務
   # source: false 關閉調用
   # source: 1  調用搏天api的隨機語錄（簡體） https://api.btstu.cn/
@@ -540,7 +540,7 @@ fontawesome_v5:
   enable: false
 
 # 加載動畫 Loading Animation
-preloader: false
+preloader: true
 
 ####    側邊欄    ####
 #-------------------------------------
