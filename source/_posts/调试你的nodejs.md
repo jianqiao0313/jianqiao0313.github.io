@@ -7,14 +7,12 @@ top_img: https://gezichenshan.top/cms/bg
 
 # 背景
 最近在研究 **[jscodeshift](https://github.com/facebook/jscodeshift)** ,是一个AST的工具，学习过程中发现调试非常不方便，运行jscodeshift需要以下命令：
-
 ```
 // --dry指的是不改变源文件，-p指的是打印出输出，方便调试 
 jscodeshift -t index.js ./file.js --dry -p
 ```
 
 这种用cli的命令不像是启动一个express服务器，可以通过node bin/www来启动。直接在index.js里打断点并不起作用。(如下图)
-
 ![image](https://static.gezichenshan.top/blog/nodejs/1.png)
 
 
@@ -49,7 +47,6 @@ jscodeshift -t index.js ./file.js --dry -p
 ```
 
 在下拉框中运行，即可进入打断点的位置（如下图）
-
 ![image](https://static.gezichenshan.top/blog/nodejs/2.png)
 
 
@@ -63,7 +60,6 @@ jscodeshift -t index.js ./file.js --dry -p
 ```
 
 2. 命令行运行
-
 ```
 npm run debug
 ```
@@ -77,15 +73,12 @@ For help, see: https://nodejs.org/en/docs/inspector
 ```
 
 4. 打开chrome，访问 **chrome://inspect/#devices** , 点击 **Open dedicated DevTools for Node** , 如下图
-
 ![image](https://static.gezichenshan.top/blog/nodejs/3.png)
 
 5. 此时会自动打开控制台，默认从程序刚开始执行就进行断点（./node_modules/jscodeshift/bin/jscodeshift.sh） 如下图
-
 ![image](https://static.gezichenshan.top/blog/nodejs/4.png)
 
 6. 如果不想一步一步跟随程序来进入需要断点的地方，你可以用 **debugger** 命令来打断点，如下图
-
 ![image](https://static.gezichenshan.top/blog/nodejs/5.png)
 
 # 总结
