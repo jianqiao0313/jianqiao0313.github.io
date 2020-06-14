@@ -18,9 +18,7 @@ jscodeshift -t index.js ./file.js --dry -p
 
 # 解决办法一（用vscode 调试 - launch模式）
 
-
 ## 用vscode的debug
-
 ```
 // launch.json
 {
