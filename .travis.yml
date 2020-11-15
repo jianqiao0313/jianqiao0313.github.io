@@ -1,20 +1,19 @@
 language: node_js
 
-node_js: "10.19.0"
+node_js: "12.19.0"
 
 before_install:
   - ls -a
   - pwd
 
 install:
-  - npm install -g hexo-cli@3.1.0
+  - npm install -g hexo-cli@4.2.0
   - npm install
 
 before_script:
   - export HEXO_ALGOLIA_INDEXING_KEY=${HEXO_ALGOLIA_INDEXING_KEY}
 
 script:
-  - git clone -b 2.3.5 https://github.com/jianqiao0313/hexo-theme-butterfly.git themes/Butterfly
   - hexo clean
   - hexo g
   - hexo algolia
