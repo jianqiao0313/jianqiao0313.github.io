@@ -109,3 +109,4 @@ npx react-native start
 
 - [WSL 和 WSL2 简单对比](https://www.v2ex.com/t/587642)
 - [WSL2 中使用adb fastboot 的方法](https://blog.csdn.net/haohaoyue01/article/details/106489387)
+- [Winux之路-WSL 2的使用及填坑](https://zhuanlan.zhihu.com/p/224753478)
