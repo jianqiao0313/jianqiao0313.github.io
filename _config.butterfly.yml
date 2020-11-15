@@ -556,8 +556,8 @@ display_mode: light
 
 # Beautify (美化頁面顯示)
 beautify:
-  enable: false
-  field: post # site/post
+  enable: true
+  field: site # site/post
   title-prefix-icon: '\f0c1'
   title-prefix-icon-color: '#F47466'
 
@@ -657,12 +657,12 @@ busuanzi:
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
-  enable: false
-  publish_date:
+  enable: true
+  publish_date: 6/7/2018 00:00:00
 
 # Aside widget - Newest Comments
 newest_comments:
-  enable: false
+  enable: true
   limit: 6
   avatar: true
   leancloud:
@@ -672,8 +672,8 @@ newest_comments:
     serverURL: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
     default_avatar: # mp/identicon/monsterid/wavatar/retro/robohash/blank
   github_issues:
-    enable: false
-    repo:
+    enable: true
+    repo: jianqiao0313/jianqiao0313.github.io
   disqus:
     enable: false
     forum:
@@ -775,7 +775,7 @@ aplayerInject:
 # position 彈窗位置
 # 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: false
+  enable: true
   position: bottom-left
   bg_light: '#49b1f5' # The background color of Toast Notification in light mode
   bg_dark: '#121212' # The background color of Toast Notification in dark mode
