@@ -6,7 +6,7 @@ top_img: https://gezichenshan.top/cms/bg
 ---
 
 # 背景
-最近在研究 **[jscodeshift](https://github.com/facebook/jscodeshift)** ,是一个AST的工具，学习过程中发现调试非常不方便，运行jscodeshift需要以下命令：
+最近在研究 **[jscodeshift](https://github.com/facebook/jscodeshift)** ,是一个AST的工具，学习过程中发现调试非常不方便，运行jscodeshift需要以下命令： 
 ```
 // --dry指的是不改变源文件，-p指的是打印出输出，方便调试 
 jscodeshift -t index.js ./file.js --dry -p
