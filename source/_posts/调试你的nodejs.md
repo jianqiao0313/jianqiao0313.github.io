@@ -47,6 +47,31 @@ jscodeshift -t index.js ./file.js --dry -p
 在下拉框中运行，即可进入打断点的位置（如下图）
 ![image](https://static.gezichenshan.top/blog/nodejs/2.png)
 
+## 调试Egg程序
+```
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Launch",// 配置名称，将会在启动配置的下拉菜单中显示
+            "type": "node",// 配置类型，这里为node
+            "request": "launch",// 请求配置类型，可以为launch（启动）或attach（附加）
+            "stopOnEntry": false,// 设为true时程序将暂停在程序入口处
+            "cwd": "${workspaceRoot}",// 调试程序时的工作目录
+            "runtimeExecutable": "npm",
+            // "windows": { "runtimeExecutable": "npm.cmd" },
+            "runtimeArgs": [ "run", "dev" ],
+            // "console": "integratedTerminal",
+            // "protocol": "auto",
+            "restart": true,
+        }
+    ]
+}
+```
 
 # 解决方法二（用chrome调试 - node --inspect-brk）
 
