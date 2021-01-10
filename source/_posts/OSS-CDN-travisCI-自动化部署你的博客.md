@@ -168,7 +168,7 @@ deploy:
 
 ![image](https://static.gezichenshan.top/blog/cdn-oss-githubPages/46.png)
 
-## 附录2 HEXO_ALGOLIA_INDEXING_KEY后台在图示处，点击复制按钮即可
+## 附录2 HEXO_ALGOLIA_INDEXING_KEY后台在图示处，点击复制按钮即可 
 
 ![image](https://static.gezichenshan.top/blog/cdn-oss-githubPages/39.png)
 
