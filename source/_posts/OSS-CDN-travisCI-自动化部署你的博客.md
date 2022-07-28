@@ -198,7 +198,7 @@ const client = new OSS({
     timeout: 99999999
 });
 // 你可以修改Travis-CI脚本传入preDirPath或把jianqiao0313.github.io改为你仓库的名称，这个主要是用来过滤路径的。举例：把/home/travis/build/jianqiao0313/jianqiao0313.github.io/uploadToOss/jianqiao0313.github.io/index.html路径替换成index.html。因为OSS上传的时候需要传路径，如果这么一大长串都传上去，你就访问不了你的博客了。试一下就知道了
-const preDirPath = argvObj.preDirPath || 'jianqiao0313.github.io';
+const preDirPath = argvObj.preDirPath || 'jianqiao0313.github.io'; 
 ```
 
 ## 附录4 邮件通知有问题
