@@ -13,7 +13,7 @@ description: 有时候WSL2中要下载一些被Qiang的资源，需要连到wind
 
 # 新增两个脚本
 > start_proxy.sh（开启代理的脚本）
-```
+``` 
 #!/bin/sh
 # 获取wsl2 ip地址
 hostip=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
