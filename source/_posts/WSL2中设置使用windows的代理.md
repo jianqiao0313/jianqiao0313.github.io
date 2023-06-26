@@ -1,8 +1,8 @@
 ---
-title: WSL2中使用windows的代理
+title: WSL2中设置使用windows的代理
 date: 2020-11-22 11:49:44
 tags: [WSL]
-description: 有时候WSL2中要下载一些被墙的资源，需要连到windows的代理上
+description: 有时候WSL2中要下载一些被Qiang的资源，需要连到windows的代理上
 ---
 
 # 准备工作
@@ -13,7 +13,7 @@ description: 有时候WSL2中要下载一些被墙的资源，需要连到window
 
 # 新增两个脚本
 > start_proxy.sh（开启代理的脚本）
-```
+``` 
 #!/bin/sh
 # 获取wsl2 ip地址
 hostip=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')

@@ -108,6 +108,6 @@ deploy:
   branch: master
 
 algolia:
-  applicationID: 'EC0I4JLQLR'
-  apiKey: '8ade3193dfaa6f084a23be25d0c1c64e'
-  indexName: 'jianqiao0313'
+  applicationID: 'T1D93UKF6Y'
+  apiKey: 'b7a175bde10d339ed1c6e6efd5033574'
+  indexName: 'hello'
