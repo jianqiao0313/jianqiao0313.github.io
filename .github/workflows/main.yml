@@ -1,0 +1,44 @@
+name: deploy Ali Oss
+on: [push]
+jobs:
+  Deploy-Ali-OSS-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      # 下载butterfly 4.9.0版本主题           
+      - run: git clone -b 4.9.0 https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+      - run: npm install hexo-cli@4.3.1 -g
+      - run: npm install yarn@1.22.17
+      - run: yarn install
+      # 替换algolia的key。已改为docSearch 所以注释掉
+      # - run: sed -i 's/@ALGOLIA_APPID@/${{ secrets.ALGOLIA_APPID }}/g' _config.yml
+      # - run: sed -i 's/@ALGOLIA_APIKEY@/${{ secrets.ALGOLIA_APIKEY }}/g' _config.yml
+      # - run: sed -i 's/@ALGOLIA_ADMIN_APIKEY@/${{ secrets.ALGOLIA_ADMIN_APIKEY }}/g' _config.yml
+      # 替换algolia的docSearch
+      - run: sed -i 's/@DOC_SEARCH_APPID@/${{ secrets.DOC_SEARCH_APPID }}/g' _config.butterfly.yml
+      - run: sed -i 's/@DOC_SEARCH_APIKEY@/${{ secrets.DOC_SEARCH_APIKEY }}/g' _config.butterfly.yml
+      # 替换valine的key
+      - run: sed -i 's/@VALINE_APPID@/${{ secrets.VALINE_APPID }}/g' _config.butterfly.yml
+      - run: sed -i 's/@VALINE_APPKEY@/${{ secrets.VALINE_APPKEY }}/g' _config.butterfly.yml
+      # 替换daoVoice的APPID
+      - run: sed -i 's/@DAO_VOICE_APPID@/${{ secrets.DAO_VOICE_APPID }}/g' _config.butterfly.yml
+      # 清理缓存
+      - run: hexo clean
+      # 生成静态页面
+      - run: hexo g
+      # algolia索引。已改为docSearch 所以注释掉
+      # - run: hexo algolia
+      # 静态html放到public目录，这样上传到oss上可以直接访问
+      # - run: mv code ./public/code
+      - name: upload blog to OSS
+        uses: fangbinwei/aliyun-oss-website-action@v1
+        with:
+            accessKeyId: ${{ secrets.ALI_OSS_ACCESSKEYID }}
+            accessKeySecret: ${{ secrets.ALI_OSS_ACCESSKEYSECRET }}
+            bucket: jianqiao0313github
+            endpoint: oss-cn-hangzhou.aliyuncs.com
+            folder: public
+            incremental: false
